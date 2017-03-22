@@ -138,7 +138,7 @@ Product.OptionsPrice.prototype.updateSpecialPriceDisplay = function(price, final
         });
     }else{
         specialPriceBox.each(function(x) {x.show();});
-        youSaveBox.hide();
+        youSaveBox.each(function(x) {x.hide();});
         magentopriceLabel.each(function(x) {x.show();});
         oldPricePriceBox.each(function(x) {
             x.removeClassName('was-old-price');
