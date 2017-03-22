@@ -125,6 +125,7 @@ Product.OptionsPrice.prototype.updateSpecialPriceDisplay = function(price, final
     var prodForm = $('product_addtocart_form');
 
     var specialPriceBox = prodForm.select('p.special-price');
+    var youSaveBox = prodForm.select('p.special-price.yousave');
     var oldPricePriceBox = prodForm.select('p.old-price, p.was-old-price');
     var magentopriceLabel = prodForm.select('span.price-label');
 
@@ -137,6 +138,7 @@ Product.OptionsPrice.prototype.updateSpecialPriceDisplay = function(price, final
         });
     }else{
         specialPriceBox.each(function(x) {x.show();});
+        youSaveBox.hide();
         magentopriceLabel.each(function(x) {x.show();});
         oldPricePriceBox.each(function(x) {
             x.removeClassName('was-old-price');
